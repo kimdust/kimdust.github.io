@@ -21,12 +21,17 @@ $(document).ready(function () {
   );
 
   $("#about_contents").hide();
+  $("#stacks_contents").hide();
   $(".about > button .fa-xmark").hide();
+  $(".stacks > button .fa-xmark").hide();
 
   $(".welcome > button").click(function () {
     $("#welcome_contents").show();
     $(".fa-xmark").show();
-    $(this).css("color", "#e9e9e9");
+    $(this).css({
+      color: "#e9e9e9",
+      fontStyle: "italic",
+    });
 
     $(".welcome").css({
       background: "#1b1b1b",
@@ -38,13 +43,20 @@ $(document).ready(function () {
       width: "150px",
     });
 
+    $(".stacks").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".about > button").css("color", "#797979");
+    $(".stacks > button").css("color", "#797979");
     $(".about > button > .fa-xmark").css("display", "none");
     $(".stacks > button > .fa-xmark").css("display", "none");
   });
 
   $(".about > button").click(function () {
     $("#about_contents").show();
-    $("#welcome_contents").hide();
+    $("#welcome_contents, #stacks_contents").hide();
     $(".fa-xmark").show();
     $(this).css("color", "#e9e9e9");
 
@@ -58,6 +70,17 @@ $(document).ready(function () {
       width: "140px",
     });
 
+    $(".stacks").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".welcome > button").css({
+      color: "#797979",
+      fontStyle: "normal",
+    });
+
+    $(".stacks > button").css("color", "#797979");
     $(".welcome > button > .fa-xmark").css("display", "none");
     $(".stacks > button > .fa-xmark").css("display", "none");
   });
@@ -65,7 +88,7 @@ $(document).ready(function () {
   $(".stacks > button").click(function () {
     $("#stacks_contents").show();
     $("#welcome_contents, #about_contents").hide();
-    $(".fa-xmark").css("display", "block");
+    $(".fa-xmark").show();
     $(this).css("color", "#e9e9e9");
 
     $(".stacks").css({
@@ -83,6 +106,12 @@ $(document).ready(function () {
       width: "150px",
     });
 
+    $(".welcome > button").css({
+      color: "#797979",
+      fontStyle: "normal",
+    });
+
+    $(".about > button").css("color", "#797979");
     $(".welcome > button > .fa-xmark").css("display", "none");
     $(".about > button > .fa-xmark").css("display", "none");
   });
