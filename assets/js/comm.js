@@ -20,14 +20,13 @@ $(document).ready(function () {
     "-=0.5"
   );
 
-  $("#about_contents").hide();
-  $("#stacks_contents").hide();
+  $("#about_contents, #stacks_contents, #project_contents").hide();
   $(".about > button .fa-xmark").hide();
   $(".stacks > button .fa-xmark").hide();
 
   $(".welcome > button").click(function () {
     $("#welcome_contents").show();
-    $("#about_contents, #stacks_contents").hide();
+    $("#about_contents, #stacks_contents, #project_contents").hide();
     $(".fa-xmark").show();
 
     $(this).css({
@@ -64,7 +63,7 @@ $(document).ready(function () {
 
   $(".about > button").click(function () {
     $("#about_contents").show();
-    $("#welcome_contents, #stacks_contents").hide();
+    $("#welcome_contents, #stacks_contents, #project_contents").hide();
     $(".fa-xmark").show();
     $(this).css("color", "#e9e9e9");
 
@@ -106,7 +105,7 @@ $(document).ready(function () {
 
   $(".stacks > button").click(function () {
     $("#stacks_contents").show();
-    $("#welcome_contents, #about_contents").hide();
+    $("#welcome_contents, #about_contents, #project_contents").hide();
     $(".fa-xmark").show();
     $(this).css("color", "#e9e9e9");
 
@@ -148,7 +147,7 @@ $(document).ready(function () {
 
   $("#html > a").click(function () {
     $("#about_contents").show();
-    $("#welcome_contents, #stacks_contents").hide();
+    $("#welcome_contents, #stacks_contents, #project_contents").hide();
     $(".about > button .fa-xmark").show();
     $(".about > button").css("color", "#e9e9e9");
 
@@ -182,7 +181,7 @@ $(document).ready(function () {
 
   $("#jsfile > a").click(function () {
     $("#stacks_contents").show();
-    $("#welcome_contents, #about_contents").hide();
+    $("#welcome_contents, #about_contents, #project_contents").hide();
     $(".stacks > button .fa-xmark").show();
     $(".stacks > button").css("color", "#e9e9e9");
 
@@ -240,8 +239,8 @@ $(document).ready(function () {
   $("#doc").click(function () {
     $("#doc_svg .cls-1").css("stroke", "#e9e9e9");
     $("#contect_svg .cls-1, #project_svg .cls-1").css("stroke", "#79797a");
-    $(".folder").css("opacity", "1");
-    $(".contect_search, .project_small").css("opacity", "0");
+    $(".folder").css({ opacity: "1", zIndex: "1" });
+    $(".project_small, .contect_search").css({ opacity: "0", zIndex: "0" });
 
     $(".welcome").css({
       background: "#272727",
@@ -270,8 +269,10 @@ $(document).ready(function () {
   $("#project").click(function () {
     $("#project_svg .cls-1").css("stroke", "#e9e9e9");
     $("#doc_svg .cls-1, #contect_svg .cls-1").css("stroke", "#79797a");
-    $(".project_small").css("opacity", "1");
-    $(".folder, .contect_search").css("opacity", "0");
+    $(".project_small").css({ opacity: "1", zIndex: "1" });
+    $(".folder, .contect_search").css({ opacity: "0", zIndex: "0" });
+    $("#project_contents").show();
+    $("#welcome_contents, #about_contents, #stacks_contents").hide();
 
     $(".welcome").css({
       background: "#272727",
@@ -293,15 +294,20 @@ $(document).ready(function () {
       width: "150px",
     });
 
+    $(".menu_bar").css("height", "calc(100vh - 37px)");
+    $(".folder").css("height", "calc(100vh - 37px)");
     $(".about > button").css("color", "#797979");
     $(".stacks > button").css("color", "#797979");
+    $(".welcome > button > .fa-xmark").css("display", "none");
+    $(".about > button > .fa-xmark").css("display", "none");
+    $(".stacks > button > .fa-xmark").css("display", "none");
   });
 
   $("#contect").click(function () {
     $("#contect_svg .cls-1").css("stroke", "#e9e9e9");
     $("#doc_svg .cls-1, #project_svg .cls-1").css("stroke", "#79797a");
-    $(".contect_search").css("opacity", "1");
-    $(".folder, .project_small").css("opacity", "0");
+    $(".contect_search").css({ opacity: "1", zIndex: "1" });
+    $(".project_small, .folder").css({ opacity: "0", zIndex: "0" });
 
     $(".welcome").css({
       background: "#272727",
