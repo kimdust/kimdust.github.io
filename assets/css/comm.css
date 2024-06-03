@@ -298,10 +298,10 @@ legend {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 #main .menu_bar .menu_list li {
-  margin: 7px 0;
+  margin: 10px 0;
 }
 #main .menu_bar .menu_list li a img {
   width: 35px;
@@ -324,8 +324,7 @@ legend {
   font-weight: 600;
 }
 #main .folder .folder_list {
-  color: #d4d4d4;
-  margin-left: 15px;
+  color: #9f9f9f;
 }
 #main .folder .folder_list li {
   display: flex;
@@ -344,28 +343,31 @@ legend {
   width: 20px;
   margin-right: 5px;
 }
+#main .folder .folder_list #kimdust {
+  padding-left: 15px;
+}
 #main .folder .folder_list #assets,
 #main .folder .folder_list #images,
 #main .folder .folder_list #html {
-  margin-left: 20px;
+  padding-left: 35px;
 }
 #main .folder .folder_list #css,
 #main .folder .folder_list #js,
 #main .folder .folder_list #scss {
-  margin-left: 40px;
+  padding-left: 55px;
 }
 #main .folder .folder_list #jsfile {
-  margin-left: 60px;
+  padding-left: 75px;
 }
 #main .folder .folder_list #jsfile a {
   display: flex;
   align-items: center;
-  color: #d4d4d4;
+  color: #9f9f9f;
 }
 #main .folder .folder_list #html a {
   display: flex;
   align-items: center;
-  color: #d4d4d4;
+  color: #9f9f9f;
 }
 #main .folder .folder_line .line1 {
   height: 122px;

@@ -50,6 +50,10 @@ $(document).ready(function () {
 
     $(".about > button").css("color", "#797979");
     $(".stacks > button").css("color", "#797979");
+    $("#jsfile").css("background", "#202020");
+    $("#jsfile a").css("color", "#9f9f9f");
+    $("#html").css("background", "#202020");
+    $("#html a").css("color", "#9f9f9f");
     $(".about > button > .fa-xmark").css("display", "none");
     $(".stacks > button > .fa-xmark").css("display", "none");
   });
@@ -81,6 +85,10 @@ $(document).ready(function () {
     });
 
     $(".stacks > button").css("color", "#797979");
+    $("#html").css("background", "#333");
+    $("#html a").css("color", "white");
+    $("#jsfile").css("background", "#202020");
+    $("#jsfile a").css("color", "#9f9f9f");
     $(".welcome > button > .fa-xmark").css("display", "none");
     $(".stacks > button > .fa-xmark").css("display", "none");
   });
@@ -93,7 +101,7 @@ $(document).ready(function () {
 
     $(".stacks").css({
       background: "#1b1b1b",
-      width: "175px",
+      width: "160px",
     });
 
     $(".welcome").css({
@@ -112,7 +120,75 @@ $(document).ready(function () {
     });
 
     $(".about > button").css("color", "#797979");
+    $("#jsfile").css("background", "#333");
+    $("#jsfile a").css("color", "white");
+    $("#html").css("background", "#202020");
+    $("#html a").css("color", "#9f9f9f");
     $(".welcome > button > .fa-xmark").css("display", "none");
     $(".about > button > .fa-xmark").css("display", "none");
+  });
+
+  $("#html > a").click(function () {
+    $("#about_contents").show();
+    $("#welcome_contents, #stacks_contents").hide();
+    $(".about > button .fa-xmark").show();
+    $(".about > button").css("color", "#e9e9e9");
+
+    $(".about").css({
+      background: "#1b1b1b",
+      width: "175px",
+    });
+
+    $(".welcome").css({
+      background: "#272727",
+      width: "140px",
+    });
+
+    $(".stacks").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".welcome > button").css({
+      color: "#797979",
+      fontStyle: "normal",
+    });
+
+    $("#html").css("background", "#333");
+    $("#html a").css("color", "white");
+    $("#jsfile").css("background", "#202020");
+    $("#jsfile a").css("color", "#9f9f9f");
+  });
+
+  $("#jsfile > a").click(function () {
+    $("#stacks_contents").show();
+    $("#welcome_contents, #about_contents").hide();
+    $(".stacks > button .fa-xmark").show();
+    $(".stacks > button").css("color", "#e9e9e9");
+
+    $(".stacks").css({
+      background: "#1b1b1b",
+      width: "160px",
+    });
+
+    $(".welcome").css({
+      background: "#272727",
+      width: "140px",
+    });
+
+    $(".about").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".welcome > button").css({
+      color: "#797979",
+      fontStyle: "normal",
+    });
+
+    $("#jsfile").css("background", "#333");
+    $("#jsfile a").css("color", "white");
+    $("#html").css("background", "#202020");
+    $("#html a").css("color", "#9f9f9f");
   });
 });

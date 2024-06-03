@@ -41,9 +41,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 10px;
+      margin-top: 15px;
       li {
-        margin: 7px 0;
+        margin: 10px 0;
         a {
           img {
             width: 35px;
@@ -69,8 +69,7 @@
       }
     }
     .folder_list {
-      color: #d4d4d4;
-      margin-left: 15px;
+      color: #9f9f9f;
       li {
         display: flex;
         align-items: center;
@@ -88,29 +87,33 @@
           margin-right: 5px;
         }
       }
+      #kimdust {
+        padding-left: 15px;
+      }
+
       #assets,
       #images,
       #html {
-        margin-left: 20px;
+        padding-left: 35px;
       }
       #css,
       #js,
       #scss {
-        margin-left: 40px;
+        padding-left: 55px;
       }
       #jsfile {
-        margin-left: 60px;
+        padding-left: 75px;
         a {
           display: flex;
           align-items: center;
-          color: #d4d4d4;
+          color: #9f9f9f;
         }
       }
       #html {
         a {
           display: flex;
           align-items: center;
-          color: #d4d4d4;
+          color: #9f9f9f;
         }
       }
     }
