@@ -336,6 +336,7 @@ html {
   height: calc(100vh - 37px);
   background: #202020;
   position: relative;
+  z-index: 1;
 }
 #main .folder .title {
   display: flex;
@@ -409,6 +410,42 @@ html {
   position: absolute;
   top: 165px;
   left: 60px;
+}
+#main .project_small {
+  width: 270px;
+  height: calc(100vh - 37px);
+  left: 60px;
+  background: #ffc4c4;
+  position: absolute;
+}
+#main .project_small .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 30px;
+  color: #9f9f9f;
+}
+#main .project_small .title h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+#main .contect_search {
+  width: 270px;
+  height: calc(100vh - 37px);
+  left: 60px;
+  background: #bdccff;
+  position: absolute;
+}
+#main .contect_search .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 30px;
+  color: #9f9f9f;
+}
+#main .contect_search .title h2 {
+  font-size: 16px;
+  font-weight: 600;
 }
 #main .develop_page {
   width: calc(100vw - 60px - 270px);

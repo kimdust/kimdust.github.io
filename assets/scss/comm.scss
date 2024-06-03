@@ -84,6 +84,7 @@ html {
     height: calc(100vh - 37px);
     background: #202020;
     position: relative;
+    z-index: 1;
     .title {
       display: flex;
       justify-content: space-between;
@@ -160,6 +161,42 @@ html {
         position: absolute;
         top: 165px;
         left: 60px;
+      }
+    }
+  }
+  .project_small {
+    width: 270px;
+    height: calc(100vh - 37px);
+    left: 60px;
+    background: #ffc4c4;
+    position: absolute;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 12px 30px;
+      color: #9f9f9f;
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+  .contect_search {
+    width: 270px;
+    height: calc(100vh - 37px);
+    left: 60px;
+    background: #bdccff;
+    position: absolute;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 12px 30px;
+      color: #9f9f9f;
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
       }
     }
   }

@@ -20,10 +20,6 @@ $(document).ready(function () {
     "-=0.5"
   );
 
-  $("#doc, #project_white, #contect_white, #git_white").css({
-    opacity: "0",
-  });
-
   $("#about_contents").hide();
   $("#stacks_contents").hide();
   $(".about > button .fa-xmark").hide();
@@ -33,6 +29,7 @@ $(document).ready(function () {
     $("#welcome_contents").show();
     $("#about_contents, #stacks_contents").hide();
     $(".fa-xmark").show();
+
     $(this).css({
       color: "#e9e9e9",
       fontStyle: "italic",
@@ -71,6 +68,11 @@ $(document).ready(function () {
     $(".fa-xmark").show();
     $(this).css("color", "#e9e9e9");
 
+    $("#doc_svg .cls-1").css("stroke", "#e9e9e9");
+    $("#contect_svg .cls-1, #project_svg .cls-1").css("stroke", "#79797a");
+    $(".folder").css("opacity", "1");
+    $(".contect_search, .project_small").css("opacity", "0");
+
     $(".about").css({
       background: "#1b1b1b",
       width: "175px",
@@ -107,6 +109,11 @@ $(document).ready(function () {
     $("#welcome_contents, #about_contents").hide();
     $(".fa-xmark").show();
     $(this).css("color", "#e9e9e9");
+
+    $("#doc_svg .cls-1").css("stroke", "#e9e9e9");
+    $("#contect_svg .cls-1, #project_svg .cls-1").css("stroke", "#79797a");
+    $(".folder").css("opacity", "1");
+    $(".contect_search, .project_small").css("opacity", "0");
 
     $(".stacks").css({
       background: "#1b1b1b",
@@ -165,6 +172,8 @@ $(document).ready(function () {
       fontStyle: "normal",
     });
 
+    $(".menu_bar").css("height", "calc(160vh - 37px)");
+    $(".folder").css("height", "calc(160vh - 37px)");
     $("#html").css("background", "#333");
     $("#html a").css("color", "#e9e9e9");
     $("#jsfile").css("background", "#202020");
@@ -197,6 +206,8 @@ $(document).ready(function () {
       fontStyle: "normal",
     });
 
+    $(".menu_bar").css("height", "calc(100vh - 37px)");
+    $(".folder").css("height", "calc(100vh - 37px)");
     $("#jsfile").css("background", "#333");
     $("#jsfile a").css("color", "#e9e9e9");
     $("#html").css("background", "#202020");
@@ -221,5 +232,98 @@ $(document).ready(function () {
         ease: "bounce.out",
       });
     });
+  });
+
+  $("#doc_svg .cls-1").css("stroke", "#e9e9e9");
+  $(".project_small, .contect_search").css("opacity", "0");
+
+  $("#doc").click(function () {
+    $("#doc_svg .cls-1").css("stroke", "#e9e9e9");
+    $("#contect_svg .cls-1, #project_svg .cls-1").css("stroke", "#79797a");
+    $(".folder").css("opacity", "1");
+    $(".contect_search, .project_small").css("opacity", "0");
+
+    $(".welcome").css({
+      background: "#272727",
+      width: "140px",
+    });
+
+    $(".welcome > button").css({
+      color: "#797979",
+      fontStyle: "normal",
+    });
+
+    $(".about").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".stacks").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".about > button").css("color", "#797979");
+    $(".stacks > button").css("color", "#797979");
+  });
+
+  $("#project").click(function () {
+    $("#project_svg .cls-1").css("stroke", "#e9e9e9");
+    $("#doc_svg .cls-1, #contect_svg .cls-1").css("stroke", "#79797a");
+    $(".project_small").css("opacity", "1");
+    $(".folder, .contect_search").css("opacity", "0");
+
+    $(".welcome").css({
+      background: "#272727",
+      width: "140px",
+    });
+
+    $(".welcome > button").css({
+      color: "#797979",
+      fontStyle: "normal",
+    });
+
+    $(".about").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".stacks").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".about > button").css("color", "#797979");
+    $(".stacks > button").css("color", "#797979");
+  });
+
+  $("#contect").click(function () {
+    $("#contect_svg .cls-1").css("stroke", "#e9e9e9");
+    $("#doc_svg .cls-1, #project_svg .cls-1").css("stroke", "#79797a");
+    $(".contect_search").css("opacity", "1");
+    $(".folder, .project_small").css("opacity", "0");
+
+    $(".welcome").css({
+      background: "#272727",
+      width: "140px",
+    });
+
+    $(".welcome > button").css({
+      color: "#797979",
+      fontStyle: "normal",
+    });
+
+    $(".about").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".stacks").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".about > button").css("color", "#797979");
+    $(".stacks > button").css("color", "#797979");
   });
 });
