@@ -20,6 +20,10 @@ $(document).ready(function () {
     "-=0.5"
   );
 
+  $("#doc, #project_white, #contect_white, #git_white").css({
+    opacity: "0",
+  });
+
   $("#about_contents").hide();
   $("#stacks_contents").hide();
   $(".about > button .fa-xmark").hide();
@@ -27,6 +31,7 @@ $(document).ready(function () {
 
   $(".welcome > button").click(function () {
     $("#welcome_contents").show();
+    $("#about_contents, #stacks_contents").hide();
     $(".fa-xmark").show();
     $(this).css({
       color: "#e9e9e9",
@@ -48,6 +53,8 @@ $(document).ready(function () {
       width: "150px",
     });
 
+    $(".menu_bar").css("height", "calc(100vh - 37px)");
+    $(".folder").css("height", "calc(100vh - 37px)");
     $(".about > button").css("color", "#797979");
     $(".stacks > button").css("color", "#797979");
     $("#jsfile").css("background", "#202020");
@@ -84,6 +91,8 @@ $(document).ready(function () {
       fontStyle: "normal",
     });
 
+    $(".menu_bar").css("height", "calc(160vh - 37px)");
+    $(".folder").css("height", "calc(160vh - 37px)");
     $(".stacks > button").css("color", "#797979");
     $("#html").css("background", "#333");
     $("#html a").css("color", "white");
@@ -119,6 +128,8 @@ $(document).ready(function () {
       fontStyle: "normal",
     });
 
+    $(".menu_bar").css("height", "calc(100vh - 37px)");
+    $(".folder").css("height", "calc(100vh - 37px)");
     $(".about > button").css("color", "#797979");
     $("#jsfile").css("background", "#333");
     $("#jsfile a").css("color", "white");

@@ -56,17 +56,35 @@
       <main id="main">
         <div class="menu_bar">
           <ul class="menu_list">
-            <li>
+            <li id="doc">
               <a href="#"><img src="./images/doc.png" alt="문서" /></a>
             </li>
-            <li>
+            <li id="project">
               <a href="#"><img src="./images/project.png" alt="프로젝트" /></a>
             </li>
-            <li>
+            <li id="contect">
               <a href="#"><img src="./images/contect.png" alt="컨택" /></a>
             </li>
-            <li>
+            <li id="git">
               <a href="#"><img src="./images/git.png" alt="깃허브" /></a>
+            </li>
+          </ul>
+          <ul class="menu_list_white">
+            <li id="doc_white">
+              <a href="#"><img src="./images/doc-white.png" alt="문서" /></a>
+            </li>
+            <li id="project_white">
+              <a href="#"
+                ><img src="./images/project-white.png" alt="프로젝트"
+              /></a>
+            </li>
+            <li id="contect_white">
+              <a href="#"
+                ><img src="./images/contect-white.png" alt="컨택"
+              /></a>
+            </li>
+            <li id="git_white">
+              <a href="#"><img src="./images/git-white.png" alt="깃허브" /></a>
             </li>
           </ul>
         </div>
@@ -159,11 +177,275 @@
               <h2>Welcome!</h2>
               <h3>I’m Web Designer & Front-end Developer</h3>
             </div>
-            <div id="about_contents">about</div>
+            <div id="about_contents">
+              <div class="about_code">
+                <div class="code_line">
+                  <span class="code_blue">&#60;&#33;</span>
+                  <span class="code_red">DOCTYPE&#160;</span>
+                  <span class="code_purple">html</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line">
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">html&#160;</span>
+                  <span class="code_purple">lang</span>
+                  <span class="code_blue">&#61;&#34;</span>
+                  <span class="code_green">ko</span>
+                  <span class="code_blue">&#34;&#62;</span>
+                </div>
+                <div class="code_line code_margin1">
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">head</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">title</span>
+                  <span class="code_blue">&#62;</span>
+                  <p>웹디자이너, 프론트엔드 개발자 김민지입니다 😎</p>
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">title</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin1">
+                  <span class="code_blue">&#60;&#47;</span>
+                  <span class="code_red">head</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin1">
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">body</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">header&#160;</span>
+                  <span class="code_purple">id</span>
+                  <span class="code_blue">&#61;&#34;</span>
+                  <span class="code_green">👩 about_me</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>
+                    책임감과 능동적인 업무 태도를 바탕으로 맡은 일을 성실하게
+                    수행할 수 있습니다.
+                  </p>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>
+                    일을 진행하면서 발생하는 다양한 상황에서 긍정적인 마인드를
+                    유지하고, 언제나 해결책을 찾기 위해 적극적으로 나섭니다.
+                  </p>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>&#160;</p>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>
+                    특히 저는 소소하고 작은 일에서 행복을 찾으려고 노력합니다.
+                  </p>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>
+                    일상 속에서 소소한 즐거움을 발견하고, 이를 통해 얻는
+                    에너지로 업무에 더욱 집중할 수 있습니다.
+                  </p>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>
+                    동료와의 짧은 대화에서 얻는 따뜻한 미소, 성취한 작은
+                    목표에서 오는 뿌듯함 등을 소중히 여기며 이를 바탕으로
+                  </p>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>
+                    더 큰 목표를 향해 나아가고 발전하는 사람이 되기 위해
+                    노력합니다.
+                  </p>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;&#47;</span>
+                  <span class="code_red">header</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+
+                <swiper-container
+                  class="mySwiper about_slide"
+                  slides-per-view="8"
+                  space-between="30"
+                  autoplay-delay="2500"
+                  autoplay-disable-on-interaction="false"
+                  loop="true"
+                >
+                  <swiper-slide>
+                    <img src="./images/about01.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about02.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about03.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about04.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about05.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about06.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about07.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about08.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about09.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about10.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about11.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about12.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about13.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about14.png" alt="김더스트" />
+                  </swiper-slide>
+                  <swiper-slide>
+                    <img src="./images/about15.png" alt="김더스트" />
+                  </swiper-slide>
+                </swiper-container>
+
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">section&#160;</span>
+                  <span class="code_purple">id</span>
+                  <span class="code_blue">&#61;&#34;</span>
+                  <span class="code_green">😺 info</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>- 김민지 Kim Min Ji</p>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>- 2001. 11. 09</p>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;&#47;</span>
+                  <span class="code_red">section</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>&#160;</p>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">section&#160;</span>
+                  <span class="code_purple">id</span>
+                  <span class="code_blue">&#61;&#34;</span>
+                  <span class="code_green">📝 education</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>- 2024. 06 서울시 뉴딜 일자리사업 웹디자인 분야 수료</p>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>
+                    - 2024. 03 이젠아카데미 UI/UX 웹퍼블리셔&프론트엔드 과정
+                    수료
+                  </p>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>- 2020. 02 수도전기공업고등학교 에너지전자제어과 졸업</p>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;&#47;</span>
+                  <span class="code_red">section</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>&#160;</p>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">section&#160;</span>
+                  <span class="code_purple">id</span>
+                  <span class="code_blue">&#61;&#34;</span>
+                  <span class="code_green">💼career</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>- 2020. 01 ~ 2023. 09 제이영테크 디자이너 재직</p>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;&#47;</span>
+                  <span class="code_red">section</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>&#160;</p>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">section&#160;</span>
+                  <span class="code_purple">id</span>
+                  <span class="code_blue">&#61;&#34;</span>
+                  <span class="code_green">🏆 certificate</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>- 2024. 04 웹디자인기능사 취득</p>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;&#47;</span>
+                  <span class="code_red">section</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>&#160;</p>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;</span>
+                  <span class="code_red">footer&#160;</span>
+                  <span class="code_purple">id</span>
+                  <span class="code_blue">&#61;&#34;</span>
+                  <span class="code_green">🙌 thank_you</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin3">
+                  <p>저 언제부터 출근하면 될까요?</p>
+                </div>
+                <div class="code_line code_margin2">
+                  <span class="code_blue">&#60;&#47;</span>
+                  <span class="code_red">footer</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line code_margin1">
+                  <span class="code_blue">&#60;&#47;</span>
+                  <span class="code_red">body</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+                <div class="code_line">
+                  <span class="code_blue">&#60;&#47;</span>
+                  <span class="code_red">html</span>
+                  <span class="code_blue">&#62;</span>
+                </div>
+              </div>
+            </div>
             <div id="stacks_contents">stacks</div>
           </div>
         </div>
       </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>
