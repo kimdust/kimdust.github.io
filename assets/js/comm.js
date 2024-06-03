@@ -95,7 +95,7 @@ $(document).ready(function () {
     $(".folder").css("height", "calc(160vh - 37px)");
     $(".stacks > button").css("color", "#797979");
     $("#html").css("background", "#333");
-    $("#html a").css("color", "white");
+    $("#html a").css("color", "#e9e9e9");
     $("#jsfile").css("background", "#202020");
     $("#jsfile a").css("color", "#9f9f9f");
     $(".welcome > button > .fa-xmark").css("display", "none");
@@ -132,7 +132,7 @@ $(document).ready(function () {
     $(".folder").css("height", "calc(100vh - 37px)");
     $(".about > button").css("color", "#797979");
     $("#jsfile").css("background", "#333");
-    $("#jsfile a").css("color", "white");
+    $("#jsfile a").css("color", "#e9e9e9");
     $("#html").css("background", "#202020");
     $("#html a").css("color", "#9f9f9f");
     $(".welcome > button > .fa-xmark").css("display", "none");
@@ -166,7 +166,7 @@ $(document).ready(function () {
     });
 
     $("#html").css("background", "#333");
-    $("#html a").css("color", "white");
+    $("#html a").css("color", "#e9e9e9");
     $("#jsfile").css("background", "#202020");
     $("#jsfile a").css("color", "#9f9f9f");
   });
@@ -198,8 +198,28 @@ $(document).ready(function () {
     });
 
     $("#jsfile").css("background", "#333");
-    $("#jsfile a").css("color", "white");
+    $("#jsfile a").css("color", "#e9e9e9");
     $("#html").css("background", "#202020");
     $("#html a").css("color", "#9f9f9f");
+  });
+
+  const skills = document.querySelectorAll("#stacks_contents li img");
+
+  skills.forEach((skill) => {
+    skill.addEventListener("mouseenter", () => {
+      gsap.to(skill, {
+        y: -10,
+        duration: 0.5,
+        ease: "bounce.out",
+      });
+    });
+
+    skill.addEventListener("mouseleave", () => {
+      gsap.to(skill, {
+        y: 0,
+        duration: 0.5,
+        ease: "bounce.out",
+      });
+    });
   });
 });

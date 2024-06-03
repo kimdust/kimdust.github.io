@@ -553,7 +553,7 @@ html {
   font-weight: 300;
 }
 #main .develop_page .main_contents #about_contents .code_line p {
-  color: white;
+  color: #e9e9e9;
   font-weight: 300;
 }
 #main .develop_page .main_contents #about_contents .code_margin1 span:first-child {
@@ -570,4 +570,35 @@ html {
 }
 #main .develop_page .main_contents #about_contents .about_slide swiper-slide img {
   width: 150px;
+}
+#main .develop_page .main_contents #stacks_contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#main .develop_page .main_contents #stacks_contents #stacks_title {
+  color: #e9e9e9;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+#main .develop_page .main_contents #stacks_contents #stacks_title:first-child {
+  margin-top: 80px;
+}
+#main .develop_page .main_contents #stacks_contents ul {
+  display: flex;
+  gap: 20px;
+}
+#main .develop_page .main_contents #stacks_contents ul li {
+  color: #e9e9e9;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+#main .develop_page .main_contents #stacks_contents ul li img {
+  height: 60px;
+  margin: 10px;
+  cursor: pointer;
 }/*# sourceMappingURL=comm.css.map */
