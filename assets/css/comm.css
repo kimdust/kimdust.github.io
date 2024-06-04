@@ -313,23 +313,17 @@ html {
 #main .menu_bar .menu_list li {
   margin: 10px 0;
 }
+#main .menu_bar .menu_list li #doc_svg .cls-1 {
+  stroke: #e9e9e9;
+}
 #main .menu_bar .menu_list li a img {
   width: 35px;
 }
-#main .menu_bar .menu_list_white {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 15px;
-  position: absolute;
-  top: 0;
-  left: 14px;
+#main .menu_bar .menu_list li a svg:hover .cls-1 {
+  stroke: #e9e9e9;
 }
-#main .menu_bar .menu_list_white li {
-  margin: 10px 0;
-}
-#main .menu_bar .menu_list_white li a img {
-  width: 35px;
+#main .menu_bar .menu_list li button svg:hover .cls-1 {
+  stroke: #e9e9e9;
 }
 #main .folder {
   width: 270px;
@@ -417,6 +411,7 @@ html {
   left: 60px;
   background: #202020;
   position: absolute;
+  opacity: 0;
 }
 #main .project_small .title {
   display: flex;
@@ -453,6 +448,7 @@ html {
   left: 60px;
   background: #202020;
   position: absolute;
+  opacity: 0;
 }
 #main .contect_search .title {
   display: flex;
@@ -532,9 +528,10 @@ html {
 }
 #main .develop_page .open_bar .tab .about button .fa-xmark {
   margin-left: 10px;
+  display: none;
 }
 #main .develop_page .open_bar .tab .stacks {
-  width: 150px;
+  width: 140px;
   height: 47px;
   display: flex;
   background: #272727;
@@ -552,6 +549,7 @@ html {
 }
 #main .develop_page .open_bar .tab .stacks button .fa-xmark {
   margin-left: 10px;
+  display: none;
 }
 #main .develop_page .main_contents {
   width: 100%;
@@ -595,6 +593,7 @@ html {
   padding: 10px 20px;
   counter-reset: line;
   font-size: 18px;
+  display: none;
 }
 #main .develop_page .main_contents #about_contents .code_line {
   display: flex;
@@ -642,10 +641,10 @@ html {
   width: 150px;
 }
 #main .develop_page .main_contents #stacks_contents {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 #main .develop_page .main_contents #stacks_contents #stacks_title {
   color: #e9e9e9;
@@ -674,18 +673,24 @@ html {
 }
 #main .develop_page .main_contents #project_contents {
   padding: 50px;
+  height: calc(195vh - 37px - 47px);
+  background: #1b1b1b;
+  display: none;
 }
 #main .develop_page .main_contents #project_contents .project_big {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 20px;
   padding: 0;
   list-style: none;
 }
 #main .develop_page .main_contents #project_contents .project_big li {
-  width: 30%;
+  width: 32%;
   box-sizing: border-box;
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 20px;
 }
 #main .develop_page .main_contents #project_contents .project_big li img {
   width: 100%;
@@ -696,10 +701,154 @@ html {
   color: #e9e9e9;
   text-align: center;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 800;
 }
-#main .develop_page .main_contents #project_contents .project_big li p {
+#main .develop_page .main_contents #project_contents .project_big li p,
+#main .develop_page .main_contents #project_contents .project_big li span {
   color: #e9e9e9;
   font-weight: 300;
   text-align: center;
+}
+#main .develop_page .main_contents #project_contents .project_big li #project_desc {
+  padding: 10px 0 20px 0;
+  font-size: 15px;
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_bottom {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+  list-style: none;
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_bottom p {
+  text-align: left;
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_bottom p strong {
+  font-weight: 800;
+  width: 100px;
+  display: block;
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_bottom #project_skill,
+#main .develop_page .main_contents #project_contents .project_big li .project_bottom #project_library {
+  width: 65%;
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_bottom #project_period,
+#main .develop_page .main_contents #project_contents .project_big li .project_bottom #project_join {
+  width: 30%;
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_button {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_button button {
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  font-family: "SFPro";
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_button button a {
+  color: #e9e9e9;
+  width: 100px;
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_button #web_button {
+  border: 1px solid #f8644c;
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_button #figma_button {
+  border: 1px solid #c3e883;
+}
+#main .develop_page .main_contents #project_contents .project_big li .project_button #github_button {
+  border: 1px solid #89ddf1;
+}
+#main .develop_page .main_contents #contect_contents {
+  color: #e9e9e9;
+  display: none;
+}
+#main .develop_page .main_contents #contect_contents .contect_info .contect_list {
+  display: flex;
+  justify-content: center;
+  padding: 150px 0 70px 0;
+  gap: 100px;
+}
+#main .develop_page .main_contents #contect_contents .contect_info .contect_list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main .develop_page .main_contents #contect_contents .contect_info .contect_list li i {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+#main .develop_page .main_contents #contect_contents .contect_info .contect_list li a {
+  color: #e9e9e9;
+  font-size: 20px;
+  font-weight: 500;
+}
+#main .develop_page .main_contents #contect_contents h3 {
+  padding: 70px 50px 30px 50px;
+  font-size: 23px;
+  font-weight: 600;
+}
+#main .develop_page .main_contents #contect_contents .form_elements {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  padding: 0 50px;
+}
+#main .develop_page .main_contents #contect_contents .form_elements .email_form {
+  display: flex;
+  flex-direction: column;
+}
+#main .develop_page .main_contents #contect_contents .form_elements .email_form label {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+#main .develop_page .main_contents #contect_contents .form_elements .email_form input {
+  width: 100%;
+  height: 50px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #e9e9e9;
+  margin-bottom: 40px;
+  color: #e9e9e9;
+  font-family: "SFPro";
+  padding: 0 5px;
+}
+#main .develop_page .main_contents #contect_contents .form_elements .email_form textarea {
+  width: 100%;
+  height: 250px;
+  background: none;
+  resize: none;
+  border: 2px solid #e9e9e9;
+  color: #e9e9e9;
+  font-family: "SFPro";
+  padding: 5px;
+}
+#main .develop_page .main_contents #contect_contents .form_elements .form_left {
+  width: 50%;
+}
+#main .develop_page .main_contents #contect_contents .form_elements .form_right {
+  width: 50%;
+}
+#main .develop_page .main_contents #contect_contents .form_elements .form_right .button_success {
+  width: 100%;
+  color: #1b1b1b;
+  background: #e9e9e9;
+  font-family: "SFPro";
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: 800;
+}
+#main .develop_page .main_contents #contect_contents .thankyou_message {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  translate: -50%, -38%;
+  background: #303030;
+  padding: 30px;
+  border-radius: 10px;
 }/*# sourceMappingURL=comm.css.map */

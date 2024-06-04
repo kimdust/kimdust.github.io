@@ -20,13 +20,34 @@ $(document).ready(function () {
     "-=0.5"
   );
 
-  $("#about_contents, #stacks_contents, #project_contents").hide();
-  $(".about > button .fa-xmark").hide();
-  $(".stacks > button .fa-xmark").hide();
+  const skills = document.querySelectorAll("#stacks_contents li img");
+
+  skills.forEach((skill) => {
+    skill.addEventListener("mouseenter", () => {
+      gsap.to(skill, {
+        y: -10,
+        duration: 0.5,
+        ease: "bounce.out",
+      });
+    });
+
+    skill.addEventListener("mouseleave", () => {
+      gsap.to(skill, {
+        y: 0,
+        duration: 0.5,
+        ease: "bounce.out",
+      });
+    });
+  });
 
   $(".welcome > button").click(function () {
     $("#welcome_contents").show();
-    $("#about_contents, #stacks_contents, #project_contents").hide();
+    $(
+      "#about_contents, #stacks_contents, #project_contents, #contect_contents"
+    ).hide();
+    $(".project_small").css({ opacity: "0", zIndex: "0", display: "none" });
+    $(".contect_search").css({ opacity: "0", zIndex: "0" });
+    $(".folder").css({ opacity: "1" });
     $(".fa-xmark").show();
 
     $(this).css({
@@ -63,7 +84,10 @@ $(document).ready(function () {
 
   $(".about > button").click(function () {
     $("#about_contents").show();
-    $("#welcome_contents, #stacks_contents, #project_contents").hide();
+    $(
+      "#welcome_contents, #stacks_contents, #project_contents, #contect_contents"
+    ).hide();
+    $(".project_small").css({ opacity: "0", zIndex: "0", display: "none" });
     $(".fa-xmark").show();
     $(this).css("color", "#e9e9e9");
 
@@ -84,7 +108,7 @@ $(document).ready(function () {
 
     $(".stacks").css({
       background: "#272727",
-      width: "150px",
+      width: "140px",
     });
 
     $(".welcome > button").css({
@@ -104,8 +128,15 @@ $(document).ready(function () {
   });
 
   $(".stacks > button").click(function () {
-    $("#stacks_contents").show();
-    $("#welcome_contents, #about_contents, #project_contents").hide();
+    $("#stacks_contents").css("display", "flex");
+    $(
+      "#welcome_contents, #about_contents, #project_contents, #contect_contents"
+    ).hide();
+    $(".project_small").css({
+      opacity: "0",
+      zIndex: "0",
+      display: "none",
+    });
     $(".fa-xmark").show();
     $(this).css("color", "#e9e9e9");
 
@@ -147,7 +178,10 @@ $(document).ready(function () {
 
   $("#html > a").click(function () {
     $("#about_contents").show();
-    $("#welcome_contents, #stacks_contents, #project_contents").hide();
+    $(
+      "#welcome_contents, #stacks_contents, #project_contents, #contect_contents"
+    ).hide();
+    $(".project_small").css({ opacity: "0", zIndex: "0", display: "none" });
     $(".about > button .fa-xmark").show();
     $(".about > button").css("color", "#e9e9e9");
 
@@ -163,7 +197,7 @@ $(document).ready(function () {
 
     $(".stacks").css({
       background: "#272727",
-      width: "150px",
+      width: "140px",
     });
 
     $(".welcome > button").css({
@@ -171,6 +205,8 @@ $(document).ready(function () {
       fontStyle: "normal",
     });
 
+    $(".stacks > button").css("color", "#797979");
+    $(".stacks > button > .fa-xmark").css("display", "none");
     $(".menu_bar").css("height", "calc(160vh - 37px)");
     $(".folder").css("height", "calc(160vh - 37px)");
     $("#html").css("background", "#333");
@@ -180,8 +216,11 @@ $(document).ready(function () {
   });
 
   $("#jsfile > a").click(function () {
-    $("#stacks_contents").show();
-    $("#welcome_contents, #about_contents, #project_contents").hide();
+    $("#stacks_contents").css("display", "flex");
+    $(
+      "#welcome_contents, #about_contents, #project_contents, #contect_contents"
+    ).hide();
+    $(".project_small").css({ opacity: "0", zIndex: "0", display: "none" });
     $(".stacks > button .fa-xmark").show();
     $(".stacks > button").css("color", "#e9e9e9");
 
@@ -205,6 +244,8 @@ $(document).ready(function () {
       fontStyle: "normal",
     });
 
+    $(".about > button").css("color", "#797979");
+    $(".about > button > .fa-xmark").css("display", "none");
     $(".menu_bar").css("height", "calc(100vh - 37px)");
     $(".folder").css("height", "calc(100vh - 37px)");
     $("#jsfile").css("background", "#333");
@@ -213,43 +254,37 @@ $(document).ready(function () {
     $("#html a").css("color", "#9f9f9f");
   });
 
-  const skills = document.querySelectorAll("#stacks_contents li img");
-
-  skills.forEach((skill) => {
-    skill.addEventListener("mouseenter", () => {
-      gsap.to(skill, {
-        y: -10,
-        duration: 0.5,
-        ease: "bounce.out",
-      });
-    });
-
-    skill.addEventListener("mouseleave", () => {
-      gsap.to(skill, {
-        y: 0,
-        duration: 0.5,
-        ease: "bounce.out",
-      });
-    });
-  });
-
-  $("#doc_svg .cls-1").css("stroke", "#e9e9e9");
-  $(".project_small, .contect_search").css("opacity", "0");
-
   $("#doc").click(function () {
     $("#doc_svg .cls-1").css("stroke", "#e9e9e9");
     $("#contect_svg .cls-1, #project_svg .cls-1").css("stroke", "#79797a");
-    $(".folder").css({ opacity: "1", zIndex: "1" });
-    $(".project_small, .contect_search").css({ opacity: "0", zIndex: "0" });
-
-    $(".welcome").css({
-      background: "#272727",
-      width: "140px",
+    $(".folder").css({
+      opacity: "1",
+      zIndex: "1",
+      height: "calc(100vh - 37px)",
     });
+    $(".project_small, .contect_search").css({ opacity: "0", zIndex: "0" });
+    $(".project_small").css("display", "none");
+    $("#welcome_contents").show();
+    $(
+      "#about_contents, #stacks_contents, #project_contents, #contect_contents"
+    ).hide();
+    $(".menu_bar").css("height", "calc(100vh - 37px)");
+    $(".welcome > button .fa-xmark").show();
+    $(".about > button > .fa-xmark").css("display", "none");
+    $(".stacks > button > .fa-xmark").css("display", "none");
+    $("#jsfile").css("background", "#202020");
+    $("#jsfile a").css("color", "#9f9f9f");
+    $("#html").css("background", "#202020");
+    $("#html a").css("color", "#9f9f9f");
 
     $(".welcome > button").css({
-      color: "#797979",
-      fontStyle: "normal",
+      color: "#e9e9e9",
+      fontStyle: "italic",
+    });
+
+    $(".welcome").css({
+      background: "#1b1b1b",
+      width: "170px",
     });
 
     $(".about").css({
@@ -269,10 +304,12 @@ $(document).ready(function () {
   $("#project").click(function () {
     $("#project_svg .cls-1").css("stroke", "#e9e9e9");
     $("#doc_svg .cls-1, #contect_svg .cls-1").css("stroke", "#79797a");
-    $(".project_small").css({ opacity: "1", zIndex: "1" });
+    $(".project_small").css({ opacity: "1", zIndex: "1", display: "block" });
     $(".folder, .contect_search").css({ opacity: "0", zIndex: "0" });
     $("#project_contents").show();
-    $("#welcome_contents, #about_contents, #stacks_contents").hide();
+    $(
+      "#welcome_contents, #about_contents, #stacks_contents, #contect_contents"
+    ).hide();
 
     $(".welcome").css({
       background: "#272727",
@@ -294,8 +331,8 @@ $(document).ready(function () {
       width: "150px",
     });
 
-    $(".menu_bar").css("height", "calc(100vh - 37px)");
-    $(".folder").css("height", "calc(100vh - 37px)");
+    $(".menu_bar").css("height", "calc(195vh - 37px)");
+    $(".project_small").css("height", "calc(195vh - 37px)");
     $(".about > button").css("color", "#797979");
     $(".stacks > button").css("color", "#797979");
     $(".welcome > button > .fa-xmark").css("display", "none");
@@ -307,7 +344,12 @@ $(document).ready(function () {
     $("#contect_svg .cls-1").css("stroke", "#e9e9e9");
     $("#doc_svg .cls-1, #project_svg .cls-1").css("stroke", "#79797a");
     $(".contect_search").css({ opacity: "1", zIndex: "1" });
-    $(".project_small, .folder").css({ opacity: "0", zIndex: "0" });
+    $(".folder").css({ height: "calc(100vh - 37px)", opacity: "0" });
+    $(".project_small").css({ opacity: "0", zIndex: "0", display: "none" });
+    $("#contect_contents").show();
+    $(
+      "#welcome_contents, #about_contents, #stacks_contents, #project_contents"
+    ).hide();
 
     $(".welcome").css({
       background: "#272727",
@@ -329,7 +371,22 @@ $(document).ready(function () {
       width: "150px",
     });
 
+    $(".menu_bar, .project_small").css("height", "calc(100vh - 37px)");
     $(".about > button").css("color", "#797979");
     $(".stacks > button").css("color", "#797979");
+    $(".welcome > button > .fa-xmark").css("display", "none");
+    $(".about > button > .fa-xmark").css("display", "none");
+    $(".stacks > button > .fa-xmark").css("display", "none");
+  });
+
+  $(".button_success").click(function () {
+    var name = $("#name").val();
+    var company = $("#company").val();
+    var email = $("#email").val();
+    var message = $("#message").val();
+
+    if (name && company && email && message) {
+      $(".thankyou_message").fadeIn().delay(2500).fadeOut();
+    }
   });
 });
