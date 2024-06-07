@@ -473,60 +473,56 @@
                   <span class="code_blue">&#62;</span>
                 </div>
 
-                <swiper-container
-                  class="mySwiper about_slide"
-                  slides-per-view="8"
-                  space-between="30"
-                  autoplay-delay="2000"
-                  autoplay-disable-on-interaction="false"
-                  loop="true"
-                >
-                  <swiper-slide>
-                    <img src="./images/about/about01.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about02.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about03.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about04.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about05.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about06.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about07.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about08.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about09.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about10.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about11.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about12.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about13.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about14.png" alt="김더스트" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img src="./images/about/about15.png" alt="김더스트" />
-                  </swiper-slide>
-                </swiper-container>
+                <div class="mySwiper about_slide">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./images/about/about01.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about02.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about03.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about04.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about05.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about06.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about07.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about08.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about09.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about10.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about11.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about12.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about13.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about14.png" alt="김더스트" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./images/about/about15.png" alt="김더스트" />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
 
                 <div class="code_line code_margin2">
                   <span class="code_blue">&#60;</span>
@@ -971,7 +967,7 @@
                     <p id="project_join"><strong>참여도</strong>팀 작업</p>
                   </div>
                 </li>
-                <li style="height: 480px">
+                <li>
                   <a href="#">
                     <img
                       src="./images/project/hb.png"
@@ -993,7 +989,7 @@
                     <p id="project_join"><strong>참여도</strong>팀 작업</p>
                   </div>
                 </li>
-                <li style="height: 480px">
+                <li>
                   <a href="#">
                     <img
                       src="./images/project/book.png"
@@ -1100,6 +1096,35 @@
     </div>
 
     <script data-cfasync="false" src="form-submission-handler.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var mySwiper = new Swiper(".about_slide", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        breakpoints: {
+          1700: {
+            slidesPerView: 8,
+          },
+          1400: {
+            slidesPerView: 6,
+          },
+          1200: {
+            slidesPerView: 5,
+          },
+          780: {
+            slidesPerView: 3,
+          },
+          480: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

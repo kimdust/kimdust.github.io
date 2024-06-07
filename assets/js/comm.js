@@ -70,8 +70,6 @@ $(document).ready(function () {
       width: "150px",
     });
 
-    $(".menu_bar").css("height", "calc(100vh - 37px)");
-    $(".folder").css("height", "calc(100vh - 37px)");
     $(".about > button").css("color", "#797979");
     $(".stacks > button").css("color", "#797979");
     $("#jsfile").css("background", "#202020");
@@ -116,8 +114,6 @@ $(document).ready(function () {
       fontStyle: "normal",
     });
 
-    $(".menu_bar").css("height", "calc(160vh - 37px)");
-    $(".folder").css("height", "calc(160vh - 37px)");
     $(".stacks > button").css("color", "#797979");
     $("#html").css("background", "#333");
     $("#html a").css("color", "#e9e9e9");
@@ -132,7 +128,7 @@ $(document).ready(function () {
     $(
       "#welcome_contents, #about_contents, #project_contents, #contect_contents"
     ).hide();
-    $(".project_small").css({
+    $(".project_small, .contect_search").css({
       opacity: "0",
       zIndex: "0",
       display: "none",
@@ -165,8 +161,6 @@ $(document).ready(function () {
       fontStyle: "normal",
     });
 
-    $(".menu_bar").css("height", "calc(100vh - 37px)");
-    $(".folder").css("height", "calc(100vh - 37px)");
     $(".about > button").css("color", "#797979");
     $("#jsfile").css("background", "#333");
     $("#jsfile a").css("color", "#e9e9e9");
@@ -207,8 +201,6 @@ $(document).ready(function () {
 
     $(".stacks > button").css("color", "#797979");
     $(".stacks > button > .fa-xmark").css("display", "none");
-    $(".menu_bar").css("height", "calc(160vh - 37px)");
-    $(".folder").css("height", "calc(160vh - 37px)");
     $("#html").css("background", "#333");
     $("#html a").css("color", "#e9e9e9");
     $("#jsfile").css("background", "#202020");
@@ -246,8 +238,6 @@ $(document).ready(function () {
 
     $(".about > button").css("color", "#797979");
     $(".about > button > .fa-xmark").css("display", "none");
-    $(".menu_bar").css("height", "calc(100vh - 37px)");
-    $(".folder").css("height", "calc(100vh - 37px)");
     $("#jsfile").css("background", "#333");
     $("#jsfile a").css("color", "#e9e9e9");
     $("#html").css("background", "#202020");
@@ -260,7 +250,6 @@ $(document).ready(function () {
     $(".folder").css({
       opacity: "1",
       zIndex: "1",
-      height: "calc(100vh - 37px)",
     });
     $(".project_small, .contect_search").css({ opacity: "0", zIndex: "0" });
     $(".project_small").css("display", "none");
@@ -268,7 +257,6 @@ $(document).ready(function () {
     $(
       "#about_contents, #stacks_contents, #project_contents, #contect_contents"
     ).hide();
-    $(".menu_bar").css("height", "calc(100vh - 37px)");
     $(".welcome > button .fa-xmark").show();
     $(".about > button > .fa-xmark").css("display", "none");
     $(".stacks > button > .fa-xmark").css("display", "none");
@@ -301,6 +289,44 @@ $(document).ready(function () {
     $(".stacks > button").css("color", "#797979");
   });
 
+  $("#contect").click(function () {
+    $("#contect_svg .cls-1").css("stroke", "#e9e9e9");
+    $("#doc_svg .cls-1, #project_svg .cls-1").css("stroke", "#79797a");
+    $(".contect_search").css({ display: "block", opacity: "1", zIndex: "1" });
+    $(".folder").css({ opacity: "0" });
+    $(".project_small").css({ opacity: "0", zIndex: "0", display: "none" });
+    $("#contect_contents").show();
+    $(
+      "#welcome_contents, #about_contents, #stacks_contents, #project_contents"
+    ).hide();
+
+    $(".welcome").css({
+      background: "#272727",
+      width: "140px",
+    });
+
+    $(".welcome > button").css({
+      color: "#797979",
+      fontStyle: "normal",
+    });
+
+    $(".about").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".stacks").css({
+      background: "#272727",
+      width: "150px",
+    });
+
+    $(".about > button").css("color", "#797979");
+    $(".stacks > button").css("color", "#797979");
+    $(".welcome > button > .fa-xmark").css("display", "none");
+    $(".about > button > .fa-xmark").css("display", "none");
+    $(".stacks > button > .fa-xmark").css("display", "none");
+  });
+
   $("#project").click(function () {
     $("#project_svg .cls-1").css("stroke", "#e9e9e9");
     $("#doc_svg .cls-1, #contect_svg .cls-1").css("stroke", "#79797a");
@@ -331,47 +357,6 @@ $(document).ready(function () {
       width: "150px",
     });
 
-    $(".menu_bar").css("height", "calc(195vh - 37px)");
-    $(".project_small").css("height", "calc(195vh - 37px)");
-    $(".about > button").css("color", "#797979");
-    $(".stacks > button").css("color", "#797979");
-    $(".welcome > button > .fa-xmark").css("display", "none");
-    $(".about > button > .fa-xmark").css("display", "none");
-    $(".stacks > button > .fa-xmark").css("display", "none");
-  });
-
-  $("#contect").click(function () {
-    $("#contect_svg .cls-1").css("stroke", "#e9e9e9");
-    $("#doc_svg .cls-1, #project_svg .cls-1").css("stroke", "#79797a");
-    $(".contect_search").css({ opacity: "1", zIndex: "1" });
-    $(".folder").css({ height: "calc(100vh - 37px)", opacity: "0" });
-    $(".project_small").css({ opacity: "0", zIndex: "0", display: "none" });
-    $("#contect_contents").show();
-    $(
-      "#welcome_contents, #about_contents, #stacks_contents, #project_contents"
-    ).hide();
-
-    $(".welcome").css({
-      background: "#272727",
-      width: "140px",
-    });
-
-    $(".welcome > button").css({
-      color: "#797979",
-      fontStyle: "normal",
-    });
-
-    $(".about").css({
-      background: "#272727",
-      width: "150px",
-    });
-
-    $(".stacks").css({
-      background: "#272727",
-      width: "150px",
-    });
-
-    $(".menu_bar, .project_small").css("height", "calc(100vh - 37px)");
     $(".about > button").css("color", "#797979");
     $(".stacks > button").css("color", "#797979");
     $(".welcome > button > .fa-xmark").css("display", "none");

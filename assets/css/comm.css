@@ -274,6 +274,8 @@ html {
   background: #343434;
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 100;
 }
 #header .top_bar h1 {
   color: #a7a7a7;
@@ -302,7 +304,8 @@ html {
   width: 60px;
   height: calc(100vh - 37px);
   background: #2c2c2c;
-  position: relative;
+  position: fixed;
+  top: 37px;
 }
 #main .menu_bar .menu_list {
   display: flex;
@@ -329,8 +332,10 @@ html {
   width: 270px;
   height: calc(100vh - 37px);
   background: #202020;
-  position: relative;
+  position: fixed;
   z-index: 1;
+  top: 37px;
+  left: 60px;
 }
 #main .folder .title {
   display: flex;
@@ -407,11 +412,12 @@ html {
 }
 #main .project_small {
   width: 270px;
-  height: calc(100vh - 37px);
+  min-height: calc(100vh - 37px);
   left: 60px;
   background: #202020;
-  position: absolute;
+  position: fixed;
   opacity: 0;
+  top: 37px;
 }
 #main .project_small .title {
   display: flex;
@@ -447,8 +453,9 @@ html {
   height: calc(100vh - 37px);
   left: 60px;
   background: #202020;
-  position: absolute;
+  position: fixed;
   opacity: 0;
+  top: 37px;
 }
 #main .contect_search .title {
   display: flex;
@@ -484,6 +491,10 @@ html {
   width: 100%;
   height: 47px;
   background: #212121;
+  position: fixed;
+  top: 37px;
+  left: 330px;
+  z-index: 10;
 }
 #main .develop_page .open_bar .tab {
   display: flex;
@@ -553,8 +564,16 @@ html {
 }
 #main .develop_page .main_contents {
   width: 100%;
-  height: calc(100vh - 37px - 47px);
+  min-height: calc(100vh - 37px - 47px);
   background: #1b1b1b;
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  top: 84px;
+  left: 330px;
+}
+#main .develop_page .main_contents::-webkit-scrollbar {
+  display: none;
 }
 #main .develop_page .main_contents #welcome_contents {
   display: flex;
@@ -577,6 +596,9 @@ html {
 #main .develop_page .main_contents #welcome_contents h3 {
   margin-top: -25px;
   font-size: 50px;
+  padding: 30px;
+  text-align: center;
+  line-height: 1;
 }
 #main .develop_page .main_contents #welcome_contents img,
 #main .develop_page .main_contents #welcome_contents h2,
@@ -637,7 +659,10 @@ html {
 #main .develop_page .main_contents #about_contents .about_slide {
   padding: 80px 50px;
 }
-#main .develop_page .main_contents #about_contents .about_slide swiper-slide img {
+#main .develop_page .main_contents #about_contents .about_slide .swiper-wrapper .swiper-slide {
+  width: 100px;
+}
+#main .develop_page .main_contents #about_contents .about_slide .swiper-wrapper .swiper-slide img {
   width: 150px;
 }
 #main .develop_page .main_contents #stacks_contents {
@@ -645,6 +670,7 @@ html {
   align-items: center;
   justify-content: center;
   display: none;
+  padding-bottom: 100px;
 }
 #main .develop_page .main_contents #stacks_contents #stacks_title {
   color: #e9e9e9;
@@ -658,6 +684,8 @@ html {
 }
 #main .develop_page .main_contents #stacks_contents ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 #main .develop_page .main_contents #stacks_contents ul li {
@@ -673,9 +701,10 @@ html {
 }
 #main .develop_page .main_contents #project_contents {
   padding: 50px;
-  height: calc(195vh - 37px - 47px);
+  min-height: calc(195vh - 37px - 47px);
   background: #1b1b1b;
   display: none;
+  overflow-y: auto;
 }
 #main .develop_page .main_contents #project_contents .project_big {
   display: flex;
@@ -770,8 +799,8 @@ html {
 #main .develop_page .main_contents #contect_contents .contect_info .contect_list {
   display: flex;
   justify-content: center;
-  padding: 150px 0 70px 0;
-  gap: 100px;
+  padding: 150px 30px 70px 30px;
+  gap: 90px;
 }
 #main .develop_page .main_contents #contect_contents .contect_info .contect_list li {
   display: flex;
@@ -851,4 +880,49 @@ html {
   background: #303030;
   padding: 30px;
   border-radius: 10px;
+}
+#main .develop_page .main_contents .main_contents {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media screen and (max-width: 1430px) {
+  #main .develop_page {
+    width: calc(100vw - 60px - 270px);
+  }
+  #main .develop_page .main_contents #project_contents .project_big li {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #main .develop_page .main_contents #contect_contents {
+    color: #e9e9e9;
+    display: none;
+  }
+  #main .develop_page .main_contents #contect_contents .contect_info .contect_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 90px 30px 70px 30px;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  #main .folder,
+  #main .project_small,
+  #main .contect_search {
+    display: none !important;
+  }
+  #main .develop_page {
+    width: calc(100vw - 60px);
+  }
+  #main .develop_page .open_bar {
+    left: 60px;
+  }
+  #main .develop_page .main_contents {
+    left: 60px;
+  }
+  #main .develop_page .main_contents #project_contents .project_big li {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=comm.css.map */
