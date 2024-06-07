@@ -876,7 +876,7 @@ html {
   position: absolute;
   top: 38%;
   left: 50%;
-  translate: -50%, -38%;
+  transform: translate(-50%, -38%);
   background: #303030;
   padding: 30px;
   border-radius: 10px;

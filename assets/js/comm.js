@@ -364,14 +364,16 @@ $(document).ready(function () {
     $(".stacks > button > .fa-xmark").css("display", "none");
   });
 
-  $(".button_success").click(function () {
-    var name = $("#name").val();
-    var company = $("#company").val();
-    var email = $("#email").val();
-    var message = $("#message").val();
+  $(".gform").on("submit", function (event) {
+    var iframe = document.getElementById("iframe1");
 
-    if (name && company && email && message) {
+    iframe.onload = function () {
       $(".thankyou_message").fadeIn().delay(2500).fadeOut();
-    }
+
+      $("#name").val("");
+      $("#company").val("");
+      $("#email").val("");
+      $("#message").val("");
+    };
   });
 });
