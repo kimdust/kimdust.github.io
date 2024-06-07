@@ -595,7 +595,7 @@ html {
 }
 #main .develop_page .main_contents #welcome_contents h3 {
   margin-top: -25px;
-  font-size: 50px;
+  font-size: 45px;
   padding: 30px;
   text-align: center;
   line-height: 1;
@@ -924,5 +924,16 @@ html {
   }
   #main .develop_page .main_contents #project_contents .project_big li {
     width: 100% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #main .develop_page .main_contents #welcome_contents img {
+    width: 250px;
+  }
+  #main .develop_page .main_contents #welcome_contents h2 {
+    font-size: 40px;
+  }
+  #main .develop_page .main_contents #welcome_contents h3 {
+    font-size: 30px;
   }
 }/*# sourceMappingURL=comm.css.map */
