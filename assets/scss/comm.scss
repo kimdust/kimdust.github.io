@@ -484,10 +484,34 @@ html {
             background: #2c2c2c;
             padding: 20px;
             border-radius: 20px;
-            img {
-              width: 100%;
-              border-radius: 10px;
-              margin-bottom: 15px;
+            a {
+              .image_container {
+                position: relative;
+                #project_img {
+                  width: 100%;
+                  border-radius: 10px;
+                  margin-bottom: 15px;
+                }
+                #logo {
+                  height: 10%;
+                  position: absolute;
+                  top: 45%;
+                  left: 50%;
+                  transform: translate(-50%, -45%) !important;
+                  z-index: 100;
+                  opacity: 0;
+                  display: none;
+                }
+                &:hover {
+                  #project_img {
+                    filter: brightness(40%);
+                  }
+                  #logo {
+                    opacity: 1;
+                    display: block;
+                  }
+                }
+              }
             }
             h6 {
               color: #e9e9e9;

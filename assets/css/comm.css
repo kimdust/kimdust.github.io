@@ -721,10 +721,30 @@ html {
   padding: 20px;
   border-radius: 20px;
 }
-#main .develop_page .main_contents #project_contents .project_big li img {
+#main .develop_page .main_contents #project_contents .project_big li a .image_container {
+  position: relative;
+}
+#main .develop_page .main_contents #project_contents .project_big li a .image_container #project_img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 15px;
+}
+#main .develop_page .main_contents #project_contents .project_big li a .image_container #logo {
+  height: 10%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -45%) !important;
+  z-index: 100;
+  opacity: 0;
+  display: none;
+}
+#main .develop_page .main_contents #project_contents .project_big li a .image_container:hover #project_img {
+  filter: brightness(40%);
+}
+#main .develop_page .main_contents #project_contents .project_big li a .image_container:hover #logo {
+  opacity: 1;
+  display: block;
 }
 #main .develop_page .main_contents #project_contents .project_big li h6 {
   color: #e9e9e9;
