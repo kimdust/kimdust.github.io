@@ -1,5 +1,6 @@
 $(document).ready(function () {
   let mainMove = gsap.timeline();
+  let a = 0;
 
   mainMove.to(".main_contents img", {
     duration: 1,
