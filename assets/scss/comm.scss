@@ -9,6 +9,10 @@ html {
   scrollbar-width: none;
 }
 
+body {
+  background: #1b1b1b;
+}
+
 #header {
   .top_bar {
     width: 100vw;
@@ -82,6 +86,7 @@ html {
       }
     }
   }
+
   .folder {
     width: 270px;
     height: calc(100vh - 37px);
@@ -101,6 +106,7 @@ html {
         font-weight: 600;
       }
     }
+
     .folder_list {
       color: #9f9f9f;
       li {
@@ -420,6 +426,7 @@ html {
           }
         }
         .about_slide {
+          overflow: hidden;
           padding: 80px 50px;
           .swiper-wrapper {
             .swiper-slide {
