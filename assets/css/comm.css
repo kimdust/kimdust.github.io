@@ -588,7 +588,7 @@ body {
 }
 #main .develop_page .main_contents #welcome_contents img {
   width: 400px;
-  margin-top: 120px;
+  margin-top: 0px;
   transform: scale(0.5);
   cursor: pointer;
 }
