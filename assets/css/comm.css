@@ -268,6 +268,10 @@ html {
   scrollbar-width: none;
 }
 
+body {
+  background: #1b1b1b;
+}
+
 #header .top_bar {
   width: 100vw;
   height: 37px;
@@ -584,7 +588,7 @@ html {
 }
 #main .develop_page .main_contents #welcome_contents img {
   width: 400px;
-  margin-top: 120px;
+  margin-top: 0px;
   transform: scale(0.5);
   cursor: pointer;
 }
@@ -657,6 +661,7 @@ html {
   margin-left: 60px;
 }
 #main .develop_page .main_contents #about_contents .about_slide {
+  overflow: hidden;
   padding: 80px 50px;
 }
 #main .develop_page .main_contents #about_contents .about_slide .swiper-wrapper .swiper-slide {
