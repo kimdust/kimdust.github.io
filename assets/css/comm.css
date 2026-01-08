@@ -799,24 +799,26 @@ body {
   justify-content: center;
   gap: 30px;
 }
-#main .develop_page .main_contents #project_contents .project_big li .project_button button {
+#main .develop_page .main_contents #project_contents 
+.project_big li .project_button button {
   padding: 10px;
+  width: 200px;
   border-radius: 10px;
-  width: 100px;
+
   font-family: "SFPro";
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  color: #fff;
 }
 #main .develop_page .main_contents #project_contents .project_big li .project_button button a {
   color: #e9e9e9;
-  width: 100px;
-}
-#main .develop_page .main_contents #project_contents .project_big li .project_button #web_button {
-  border: 1px solid #f8644c;
-}
-#main .develop_page .main_contents #project_contents .project_big li .project_button #figma_button {
-  border: 1px solid #c3e883;
-}
-#main .develop_page .main_contents #project_contents .project_big li .project_button #github_button {
-  border: 1px solid #89ddf1;
+  width: 400px;
 }
 #main .develop_page .main_contents #contect_contents {
   color: #e9e9e9;
